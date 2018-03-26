@@ -1,0 +1,15 @@
+<div class="ch-container content-container content-container--border">
+  <h2 class="block__header center">The latest from Activa</h2>
+  <div class="ch-row">
+    {% for post in site.posts limit:3 %}
+      <div class="ch-col--xs-12 ch-col--sm-4 ch-col--md-4">
+        {% include article-card.html %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="ch-row center">
+    <div class="ch-col--md-12">
+      <a href="/news" class="activa-btn">View all news</a>
+    </div>
+  </div>
+</div>

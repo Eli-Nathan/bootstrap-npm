@@ -1,0 +1,145 @@
+---
+layout: amp
+---
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+  	<meta name="google-site-verification" content="Yu1Wu5yGnn9bd-FI_8YKvZR_y8cVnzSORhMwAtETy0s" />
+    <title>{{ page.title }} | Activa Contracts</title>
+    <link rel="canonical" href="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
+    <style amp-custom>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 12px;
+        line-height: 24px;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        font-family: "Avenir Next", Avenir, Arial, sans-serif;
+        background-color: #fafafa;
+        color: #2d3737;
+      }
+
+      .ch-container {
+        padding-right: 14px;
+        padding-left: 14px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 768px;
+      }
+
+      .ch-container:before,
+      .ch-container:after {
+        display: table;
+        content: " ";
+      }
+
+      .ch-container:after {
+        clear: both;
+      }
+
+      .ch-header {
+        background-color: #fff;
+        border-bottom: 1px solid #f2f2f2;
+        border-top: 4px solid #e32118;
+        margin-bottom: 0;
+        min-height: 45px;
+        vertical-align: middle;
+      }
+
+      .ch-activa-brand {
+        background-image: url(/assets/images/logo-mobile.svg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        display: block;
+        height: 66px;
+        width: 154px;
+        text-indent: -100000px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 26px;
+        line-height: 36px;
+      }
+
+      h2 {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      h3 {
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      p {
+        max-width: none;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+      }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Activa_UK" />
+    <meta name="twitter:url" content="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
+    <meta name="twitter:title" content="{{ page.article_title }}" />
+    <meta name="twitter:description" content="{{ page.excerpt }}" />
+    <meta name="twitter:image" content="https://www.activacontracts.co.uk/assets/images/content/news/{% if page.image %}{{ page.image }}{% else %}budget.jpg{% endif %}" />
+  </head>
+
+  <body>
+    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-MM84R55&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
+    <header class="ch-header">
+      <div class="ch-container">
+        <a href="/" class="ch-activa-brand">Activa Contracts</a>
+      </div>
+    </header>
+
+    <div class="ch-container">
+      <article>
+        <p>{{ page.date | date: "%-d %B %Y" }}</p>
+
+        <h1>{{ page.article_title }}</h1>
+
+        <amp-img
+          src="/assets/images/content/news/{% if page.image %}{{ page.image }}{% else %}budget.jpg{% endif %}"
+          alt=""
+          width="620"
+          height="413"
+          layout="responsive">
+        </amp-img>
+
+        <p>{{ page.excerpt }}</p>
+
+        {{ content }}
+      </article>
+    </div>
+  </body>
+</html>

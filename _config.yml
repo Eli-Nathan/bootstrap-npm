@@ -1,0 +1,12 @@
+name: Eli
+markdown: redcarpet
+highlighter: null # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json",  "README.md", "_scripts", "_scss", "gemfile", "Gemfile.lock"]
+url: "https://www.activacontracts.co.uk"
+
+
+collections:
+  posts:
+    output:   true
+
+permalink: /news/:title.html

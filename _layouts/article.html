@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+  {% if page.noindex %}
+	  <meta name="robots" content="noindex">
+  {% endif %}
+
+	<title>{{ page.title }} | Activa Contracts</title>
+
+	<meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="viewport" content="width=device-width">
+	<meta name="google-site-verification" content="Yu1Wu5yGnn9bd-FI_8YKvZR_y8cVnzSORhMwAtETy0s" />
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="amphtml" href="{{site.url}}/amp{{page.url}}">
+	<link rel="canonical" href="{{site.url}}{{page.url}}">
+
+	<link rel="stylesheet" href="/assets/css/chassis/chassis-locally-hosted.css" />
+	<link rel="stylesheet" href="/assets/css/styles.css">
+
+	{% include google-analytics.html %}
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Activa_UK" />
+	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+	<meta name="twitter:title" content="{{ page.article_title }}" />
+	<meta name="twitter:description" content="{{ page.excerpt }}" />
+	<meta name="twitter:image" content="https://www.activacontracts.co.uk/assets/images/content/news/{% if page.image %}{{ page.image }}{% else %}budget.jpg{% endif %}" />
+</head>
+
+<body>
+	{% include google-analytics-fallback.html %}
+
+	<div class="wrapper wrapper--gray wrapper--border">
+		{% include header.html %}
+
+		<div class="ch-container content-container">
+			<div class="ch-row ">
+				<div class="ch-col--md-8 ch-col--md-offset-2">
+					<section>
+						<article class="article--post">
+              {% if page.date %}
+		            <p class="block__item__date">
+	  					  <span class="clock-icon"></span>
+	  					  {{ page.date | date: "%-d %B %Y" }}<br>
+              {% endif %}
+		          <h1 class="article-title">{{ page.article_title }}</h1>
+
+		          {% if page.image %}
+		            <img src="/assets/images/content/news/{{ page.image }}" alt="" class="ch-img--responsive image--full" />
+		          {% else %}
+		            <img src="/assets/images/content/news/budget.jpg" alt="" class="ch-img--responsive image--full" />
+		          {% endif %}
+
+		          <p class="intro">{{ page.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+							{{ content }}
+						</article>
+					</section>
+				</div>
+		  </div>
+		</div>
+
+    <div class="border border--category">
+		  <div class="ch-container content-container">
+		  	<div class="ch-row">
+		      <div class="ch-col--md-8 ch-col--md-offset-2">
+		        <div class="ch-row">
+		          <div class="ch-col--xs-12">
+		            <h2>Category</h2>
+		          </div>
+		          <div class="ch-col--md-12">
+                <a class="ch-btn ch-btn--white ch-btn--tag" href="/news/tags/{{ page.tags | first | lowercase }}">{{ page.tags | first | replace_first: '-', ' ' | capitalize }}</a>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="border">
+		  <div class="ch-container content-container">
+		  	<div class="ch-row">
+		      <div class="ch-col--md-8 ch-col--md-offset-2">
+		        <div class="ch-row">
+		          <div class="ch-col--xs-12">
+		            <h2>Share this post</h2>
+		          </div>
+		          <div class="ch-col--xs-12 ch-col--md-4">
+		            <a class="ch-btn ch-btn--block ch-btn--margin ch-btn--facebook" href="https://www.facebook.com/sharer.php?u=https://www.activacontracts.co.uk{{ page.url }}"><p>Share on Facebook</p></a>
+		          </div>
+		          <div class="ch-col--xs-12 ch-col--md-4">
+		            <a class="ch-btn ch-btn--block ch-btn--margin ch-btn--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.activacontracts.co.uk{{ page.url }}"><p>Share on LinkedIn</p></a>
+		          </div>
+              <div class="ch-col--xs-12 ch-col--md-4">
+		            <a class="ch-btn ch-btn--block ch-btn--margin ch-btn--twitter" href="https://twitter.com/intent/tweet?original_referer=https://www.activacontracts.co.uk{{ page.url }}"><p>Share on Twitter</p></a>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="ch-container content-container">
+		  <div class="ch-row">
+		    <div class="ch-col--md-8 ch-col--md-offset-2">
+		      <a href="/news" class="activa-btn ch-btn--block">Return to news</a>
+		    </div>
+		  </div>
+		</div>
+
+		{% include footer.html %}
+		{% include scripts.html %}
+		{% include crazy-egg.html %}
+	</div>
+</body>
+
+</html>
