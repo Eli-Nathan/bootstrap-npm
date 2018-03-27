@@ -1,6 +1,6 @@
-# Activa
+# Bootstrap
 
-A Jekyll-based development environment for www.activacontracts.co.uk.
+A Jekyll-based development environment.
 
 ---
 
@@ -11,6 +11,7 @@ This repo is where we maintain:
 - the JS (/_scripts)
 - the PHP for the Contact form
 
+ 
 
 ## Dependencies
 
@@ -47,18 +48,3 @@ Added or deleted a page?
 1) open sitemap.xml
 2) save sitemap.xml
 3) /_site/sitemap.xml should be updated
-
-
-## Release to dev
-
-1. working on the dev branch, you'll have been running gulp server during development so all changes are compiled into /_site
-2. commit and push to Github
-  1. CI will deploy to dev.activacontracts.co.uk
-
-
-## Release to production
-
-1. merge dev branch into master branch
-2. push to Github
-  1. CI will deploy to www.activacontracts.co.uk
-
