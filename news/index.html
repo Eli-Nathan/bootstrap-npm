@@ -3,16 +3,13 @@ layout: default
 title: News
 meta_description: All the latest motor industry news from Activa Contracts - including fleet management, contract hire and vehicle leasing.
 current: news
-pagination:
-  enabled: true
-  sort_reverse: true
 ---
 
 <div class="activa-banner activa-banner--generic activa-banner--news">
-  <div class="ch-container">
-    <div class="ch-row">
-      <div class="ch-col--md-7 ch-col--lg-9">
-        <h1 class="ch-h1 activa-banner__header">News</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-9">
+        <h1 class="h1 activa-banner__header">News</h1>
         <p class="activa-banner__sub">At Activa we like to keep our customers up to date with all the latest news regarding Contract Hire, Vehicle Leasing and Fleet Management for company vehicles throughout the UK.</p>
       </div>
     </div>
@@ -20,14 +17,14 @@ pagination:
 </div>
 
 <div class="content-container">
-  <div class="ch-container">
-    <div class="ch-row">
-      <div class="ch-col--xs-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
         <ul class="category-list">
-          <li><a href="/news/" class="ch-btn ch-btn--white ch-btn--sm ch-btn--active">All Articles <span class="post-count">{{ site.posts | size }}</span></a></li>
-          <li><a href="/news/tags/activa-news" class="ch-btn ch-btn--white ch-btn--sm">Activa news <span class="post-count">{{ site.tags.activa-news | size }}</span></a></li>
-          <li><a href="/news/tags/industry-updates" class="ch-btn ch-btn--white ch-btn--sm">Industry updates <span class="post-count">{{ site.tags.industry-updates | size }}</span></a></li>
-          <li><a href="/news/tags/legislation" class="ch-btn ch-btn--white ch-btn--sm">Legislation <span class="post-count">{{ site.tags.legislation | size }}</span></a></li>
+          <li><a href="/news/" class="btn btn--white btn--sm btn--active">All Articles <span class="post-count">{{ site.posts | size }}</span></a></li>
+          <li><a href="/news/tags/activa-news" class="btn btn--white btn--sm">Activa news <span class="post-count">{{ site.tags.activa-news | size }}</span></a></li>
+          <li><a href="/news/tags/industry-updates" class="btn btn--white btn--sm">Industry updates <span class="post-count">{{ site.tags.industry-updates | size }}</span></a></li>
+          <li><a href="/news/tags/legislation" class="btn btn--white btn--sm">Legislation <span class="post-count">{{ site.tags.legislation | size }}</span></a></li>
         </ul>
       </div>
     </div>
@@ -35,17 +32,13 @@ pagination:
 </div>
 
 <div class="content-container">
-  <div class="ch-container">
-    <div class="ch-row">
+  <div class="container">
+    <div class="row">
       <div class="articles">
-        {% for post in paginator.posts %}
-        <div class="ch-col--xs-12 ch-col--sm-6 ch-col--md-4">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           {% include article-card.html %}
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
 </div>
-
-{% include pagination.html %}
