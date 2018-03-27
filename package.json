@@ -19,6 +19,7 @@
     "gulp-autoprefixer": "*",
     "gulp-buffer": "0.0.2",
     "gulp-changed": "*",
+    "gulp-connect-php": "^1.0.3",
     "gulp-debug": "*",
     "gulp-if": "*",
     "gulp-imagemin": "*",
@@ -44,6 +45,7 @@
   ],
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "gulp-mamp": "0.0.5",
     "popper.js": "^1.14.1",
     "server": "^1.0.18"
   },
